@@ -14,6 +14,7 @@ import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
 import android.widget.Toast;
 
@@ -28,7 +29,9 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+        binding.download.setOnClickListener(v ->startSecondActivity());
         binding.uploadpic.setOnClickListener(v -> getPhoto());
+        binding.textContent.setMovementMethod(new ScrollingMovementMethod());
 
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE) !=
                 PackageManager.PERMISSION_GRANTED) {
@@ -78,4 +81,26 @@ public class MainActivity extends AppCompatActivity {
 
         return BitmapFactory.decodeFile(picturePath);
     }
+
+    public void startSecondActivity() {
+        Intent intent = new Intent(this, SecondActivity.class);
+        String message = binding.textContent.getText().toString();
+        intent.putExtra("EXTRA_MESSAGE", message);
+        startActivity(intent);
+
+        //Intent intent = new Intent(this, SecondActivity.class);
+        //String image = binding.mainimage.getImageAlpha()
+
+
+    }
+
+    private void moveScroll() {
+        final int scrollAmount = binding.textContent.getLayout().getLineTop(binding.textContent.getLineCount()) - binding.textContent.getHeight();
+        if (scrollAmount > 0)
+            binding.textContent.scrollTo(0, scrollAmount);
+        else
+            binding.textContent.scrollTo(0,0);
+        moveScroll();
+    }
+
 }
