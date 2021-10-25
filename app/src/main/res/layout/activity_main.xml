@@ -11,8 +11,9 @@
         android:id="@+id/writer_name"
         android:layout_width="0dp"
         android:layout_height="51dp"
-        android:hint="글쓴이"
+        android:hint="글쓴이(최대 10자)"
         android:inputType="text"
+        android:maxLength="10"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,19 +22,20 @@
 
     <EditText
         android:id="@+id/text_content"
-        android:layout_width="0dp"
-        android:layout_height="772dp"
+        android:layout_width="590dp"
+        android:layout_height="782dp"
+        android:layout_gravity="start"
+        android:layout_marginTop="44dp"
+        android:hint="내용"
         android:padding="10dp"
         android:scrollbars="vertical"
         android:textSize="20sp"
-        android:hint="내용"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.445" />
+        app:layout_constraintTop_toBottomOf="@+id/writer_name"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/uploadpic"

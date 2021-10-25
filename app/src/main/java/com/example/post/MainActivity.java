@@ -16,6 +16,8 @@ import android.os.Bundle;
 import android.provider.MediaStore;
 import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
+import android.view.KeyEvent;
+import android.view.View;
 import android.widget.Toast;
 
 import com.example.post.databinding.ActivityMainBinding;
@@ -31,6 +33,19 @@ public class MainActivity extends AppCompatActivity {
 
         binding.download.setOnClickListener(v ->startSecondActivity());
         binding.uploadpic.setOnClickListener(v -> getPhoto());
+        binding.writerName.setOnKeyListener(new View.OnKeyListener() {
+            @Override
+            public boolean onKey(View v, int keyCode, KeyEvent event) {
+                if (event.getAction() == KeyEvent.ACTION_DOWN &&
+                        event.getKeyCode() == KeyEvent.KEYCODE_ENTER) {
+                    return true;
+                }
+
+                return false;
+            }
+        });
+
+
         binding.textContent.setMovementMethod(new ScrollingMovementMethod());
 
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE) !=
