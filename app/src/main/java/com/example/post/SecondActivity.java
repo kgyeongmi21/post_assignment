@@ -18,7 +18,7 @@ public class SecondActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
         String message = intent.getStringExtra("EXTRA_MESSAGE");
-        binding.textReceive.setText("김경미 " + message);
+        binding.textReceive.setText("" + message);
 
     }
 }
