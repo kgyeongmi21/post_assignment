@@ -9,6 +9,7 @@ import com.example.post.databinding.ActivitySecondBinding;
 
 public class SecondActivity extends AppCompatActivity {
     ActivitySecondBinding binding;
+    int selectYear, selectMonth, selectDay;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +20,12 @@ public class SecondActivity extends AppCompatActivity {
         Intent intent = getIntent();
         String message = intent.getStringExtra("EXTRA_MESSAGE");
         binding.textReceive.setText("" + message);
-
+        ///binding.time.setText(getApplicationContext(),
+               // Integer.toString(selectYear) + "년 " +
+                //Integer.toString(selectMonth) + "월 " +
+                //Integer.toString(selectDay) + "일 " +
+                //Integer.toString(getCurrentHour()) + "시 " +
+                //Integer.toString(getCurrentMinute()) + "분 ",
+                //show());
     }
 }
