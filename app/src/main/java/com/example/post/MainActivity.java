@@ -102,9 +102,10 @@ public class MainActivity extends AppCompatActivity {
         String message = binding.textContent.getText().toString();
         intent.putExtra("EXTRA_MESSAGE", message);
         startActivity(intent);
+        String mess = binding.writerName.getText().toString();
+        intent.putExtra("NAME_TIME", mess);
+        startActivity(intent);
 
-        //Intent intent = new Intent(this, SecondActivity.class);
-        //String image = binding.mainimage.getImageAlpha()
 
 
     }

@@ -22,8 +22,8 @@
 
     <EditText
         android:id="@+id/text_content"
-        android:layout_width="590dp"
-        android:layout_height="782dp"
+        android:layout_width="587dp"
+        android:layout_height="467dp"
         android:layout_gravity="start"
         android:layout_marginTop="44dp"
         android:hint="내용"
@@ -35,7 +35,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/writer_name"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.629" />
 
     <Button
         android:id="@+id/uploadpic"
