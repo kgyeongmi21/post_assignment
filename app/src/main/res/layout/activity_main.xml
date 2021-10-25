@@ -22,49 +22,51 @@
         android:id="@+id/text_content"
         android:layout_width="550dp"
         android:layout_height="792dp"
-        android:layout_marginTop="16dp"
         android:padding="10dp"
         android:scrollbars="vertical"
         android:text="내용"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf=""
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.444"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/writer_name" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/uploadpic"
-        android:layout_width="106dp"
-        android:layout_height="57dp"
+        android:layout_width="124dp"
+        android:layout_height="61dp"
         android:text="사진 추가"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.022"
+        app:layout_constraintHorizontal_bias="0.047"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.986" />
+        app:layout_constraintVertical_bias="0.975" />
 
     <Button
         android:id="@+id/download"
-        android:layout_width="416dp"
-        android:layout_height="57dp"
+        android:layout_width="232dp"
+        android:layout_height="61dp"
         android:text="저장"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.898"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.986" />
+        app:layout_constraintHorizontal_bias="0.479"
+        app:layout_constraintStart_toEndOf="@+id/uploadpic"
+        app:layout_constraintTop_toTopOf="@+id/uploadpic"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
         android:id="@+id/mainimage"
-        android:layout_width="561dp"
-        android:layout_height="243dp"
+        android:layout_width="0dp"
+        android:layout_height="264dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.03"
+        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.109" />
+        app:layout_constraintVertical_bias="0.135" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
