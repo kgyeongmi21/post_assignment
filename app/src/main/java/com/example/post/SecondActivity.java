@@ -2,6 +2,8 @@ package com.example.post;
 
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -26,6 +28,12 @@ public class SecondActivity extends AppCompatActivity {
         binding.textReceive.setText("" + message);
         String mess = intent.getStringExtra("NAME_TIME");
         binding.time.setText(mess + now);
+        binding.buttonExit.setOnClickListener(v -> finish());
 
+    }
+
+    public void finish() {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
     }
 }

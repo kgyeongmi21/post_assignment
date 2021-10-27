@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
 import android.Manifest;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
@@ -22,8 +23,13 @@ import android.widget.Toast;
 
 import com.example.post.databinding.ActivityMainBinding;
 
+import java.io.ByteArrayOutputStream;
+import java.io.FileOutputStream;
+import java.io.InputStream;
+
 public class MainActivity extends AppCompatActivity {
     ActivityMainBinding binding;
+    Bitmap bmp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -107,7 +113,6 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
 
 
-
     }
 
     private void moveScroll() {
@@ -118,5 +123,6 @@ public class MainActivity extends AppCompatActivity {
             binding.textContent.scrollTo(0,0);
         moveScroll();
     }
+
 
 }

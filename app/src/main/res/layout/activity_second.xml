@@ -31,12 +31,23 @@
         android:id="@+id/time"
         android:layout_width="142dp"
         android:layout_height="91dp"
-        android:text="김경미"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.847"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.185" />
+
+    <Button
+        android:id="@+id/button_exit"
+        android:layout_width="364dp"
+        android:layout_height="50dp"
+        android:backgroundTint="#000000"
+        android:text="CLOSE"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.976" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
