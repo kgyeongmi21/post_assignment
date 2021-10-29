@@ -6,16 +6,28 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
 
+    <EditText
+        android:id="@+id/text_content"
+        android:layout_width="400dp"
+        android:layout_height="381dp"
+        android:layout_gravity="start"
+        android:gravity="top"
+        android:hint="  내용"
+        android:scrollbars="vertical"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.74" />
 
     <EditText
         android:id="@+id/writer_name"
         android:layout_width="0dp"
         android:layout_height="51dp"
-        android:hint="글쓴이(최대 10자)"
+        android:hint="  글쓴이(최대 10자)"
         android:inputType="text"
         android:maxLength="10"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -24,28 +36,12 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.017" />
 
-    <EditText
-        android:id="@+id/text_content"
-        android:layout_width="587dp"
-        android:layout_height="467dp"
-        android:layout_gravity="start"
-        android:layout_marginTop="44dp"
-        android:hint="내용"
-        android:padding="10dp"
-        android:scrollbars="vertical"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/writer_name"
-        app:layout_constraintVertical_bias="0.629" />
-
     <Button
         android:id="@+id/uploadpic"
         android:layout_width="124dp"
         android:layout_height="61dp"
         android:text="사진 추가"
+        android:backgroundTint="#FFC107"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.047"
@@ -58,6 +54,7 @@
         android:layout_width="232dp"
         android:layout_height="61dp"
         android:text="저장"
+        android:backgroundTint="#D55A5A"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.479"
@@ -67,13 +64,15 @@
 
     <ImageView
         android:id="@+id/mainimage"
-        android:layout_width="0dp"
-        android:layout_height="264dp"
+        android:layout_width="413dp"
+        android:layout_height="153dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.15" />
+        app:layout_constraintVertical_bias="0.157" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

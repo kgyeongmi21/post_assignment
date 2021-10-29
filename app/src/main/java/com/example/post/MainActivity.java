@@ -111,9 +111,13 @@ public class MainActivity extends AppCompatActivity {
         String mess = binding.writerName.getText().toString();
         intent.putExtra("NAME_TIME", mess);
         startActivity(intent);
+        Intent intent1 = new Intent(this, SecondActivity.class);
+        String bitmap = binding.mainimage.toString();
+        intent1.putExtra("BitmapImage", bitmap);
 
 
     }
+
 
     private void moveScroll() {
         final int scrollAmount = binding.textContent.getLayout().getLineTop(binding.textContent.getLineCount()) - binding.textContent.getHeight();

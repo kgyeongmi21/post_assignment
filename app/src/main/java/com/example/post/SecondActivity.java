@@ -28,9 +28,15 @@ public class SecondActivity extends AppCompatActivity {
         binding.textReceive.setText("" + message);
         String mess = intent.getStringExtra("NAME_TIME");
         binding.time.setText(mess + now);
+        Intent intent1 = getIntent();
+        String mess1 = intent1.getStringExtra("BitmapImage");
+        binding.imageReceive.toString();
+
         binding.buttonExit.setOnClickListener(v -> finish());
 
+
     }
+
 
     public void finish() {
         Intent intent = new Intent(this, MainActivity.class);
